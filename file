@@ -1,1 +1,12 @@
+3.	Restriction Bypass by Header Spoofing
+Vulnerability ID	
+Redacted Summary	During the security review, it was observed that the application is blocking the malicious payloads, but it can be bypassed by adding X-Forwarded-For Header
+Description	The application trusts an HTTP request header like X-Forwarded-For to accurately specify the remote IP address of the connecting client, then malicious clients can spoof their IP address by using IP addresses like 127.0.0.1, 0.0.0.0, 169.254.169.254, localhost or any Client IP Spoofing in the headers like X-Forwarded-For, True-Client-IP, Real-Client-IP.
+Applications use the localhost or Client IP addresses to enforce access controls and rate limits that lead to Access Control Bypass, Rate-Limiting Bypass, and HTTP Status Codes Bypass like 403,406, and 401.
+Severity	Low
+CVSS Score	3.4
+CVSS Vector	AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C/CR:M/IR:M/AR:M/MAV:N/MAC:H/MPR:N/MUI:N/MS:U/MC:L/MI:N/MA:N
+
+Recommendation	HTTP request headers such as X-Forwarded-For, True-Client-IP, and X-Real-IP should not be used for any Access Control List (ACL), Input Parameter Checks, or Rate Limiting Checks because they can be spoofed by attackers.
+
 

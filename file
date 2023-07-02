@@ -9,4 +9,4 @@ CVSS Vector	AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C/CR:M/IR:M/AR:M/MAV
 
 Recommendation	HTTP request headers such as X-Forwarded-For, True-Client-IP, and X-Real-IP should not be used for any Access Control List (ACL), Input Parameter Checks, or Rate Limiting Checks because they can be spoofed by attackers.
 
-
+cjgvz042vtc0000j77t0gjep9tyyyyyyb.oast.fun
